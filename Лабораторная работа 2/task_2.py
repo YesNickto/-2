@@ -1,3 +1,5 @@
+import math
+
 money_capital = 0
 salary = 5000  # Ежемесячная зарплата
 spend = 6000  # Траты за первый месяц
@@ -9,4 +11,4 @@ for months in range(1, months + 1):
     money_capital = money_capital + spend - salary
     spend = spend * (increase + 1)
 
-print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", int(money_capital+1))
+print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", math.ceil(money_capital))
